@@ -6,11 +6,11 @@ path = "**"
 SPDX-FileCopyrightText = "2026 the RangeFoundry contributors"
 SPDX-License-Identifier = "MIT"
 
-# Logo and icon artwork. Trademark use of the names and logos: TRADEMARKS.md.
+# Logo and icon artwork: no open license (LICENSES/LicenseRef-Brand.txt).
 [[annotations]]
 path = ["rangefoundry/**", "autolever/**", "buildguide/**", "workbench/**"]
 SPDX-FileCopyrightText = "2026 the RangeFoundry contributors"
-SPDX-License-Identifier = "CC-BY-4.0"
+SPDX-License-Identifier = "LicenseRef-Brand"
 
 # Albert Sans subsets and the license text they ship with (fonts/OFL.txt).
 [[annotations]]
