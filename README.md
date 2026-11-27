@@ -61,3 +61,9 @@ What a site that copies version 1 changes:
 - The dark scheme now also follows the system setting, not only MkDocs Material's `slate` scheme.
 
 To change a color, edit `tokens.css`, raise its version, check every pair against the contrast ratios in its header, then update each site.
+
+## License
+
+The repository follows the [REUSE](https://reuse.software/) specification: `REUSE.toml` gives the license of every file and `LICENSES/` holds the texts.
+
+Tokens, examples and docs are MIT. The names and logos (the artwork in `rangefoundry/`, `autolever/`, `buildguide/` and `workbench/`, and `generate.py`, which embeds the logo geometry and is part of the artwork) carry no open license: `LicenseRef-Brand` lets you show the unmodified logo to refer to the project. The Albert Sans fonts in `fonts/` are under the SIL Open Font License 1.1 (`fonts/OFL.txt`).
