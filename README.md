@@ -66,4 +66,4 @@ To change a color, edit `tokens.css`, raise its version, check every pair agains
 
 The repository follows the [REUSE](https://reuse.software/) specification: `REUSE.toml` gives the license of every file and `LICENSES/` holds the texts.
 
-Code, tokens, examples and docs are MIT. The names and logos (the artwork in `rangefoundry/`, `autolever/`, `buildguide/` and `workbench/`) carry no open license: `LicenseRef-Brand` lets you show the unmodified logo to refer to the project. The Albert Sans fonts in `fonts/` are under the SIL Open Font License 1.1 (`fonts/OFL.txt`).
+Tokens, examples and docs are MIT. The names and logos (the artwork in `rangefoundry/`, `autolever/`, `buildguide/` and `workbench/`, and `generate.py`, which embeds the logo geometry and is part of the artwork) carry no open license: `LicenseRef-Brand` lets you show the unmodified logo to refer to the project. The Albert Sans fonts in `fonts/` are under the SIL Open Font License 1.1 (`fonts/OFL.txt`).

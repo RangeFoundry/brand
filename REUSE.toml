@@ -1,6 +1,6 @@
 version = 1
 
-# Everything else: tokens.css, generate.py, examples/, the docs and the dev container.
+# Everything else: tokens.css, examples/, the docs and the dev container.
 [[annotations]]
 path = "**"
 SPDX-FileCopyrightText = "2026 the RangeFoundry contributors"
@@ -9,6 +9,12 @@ SPDX-License-Identifier = "MIT"
 # Logo and icon artwork: no open license (LICENSES/LicenseRef-Brand.txt).
 [[annotations]]
 path = ["rangefoundry/**", "autolever/**", "buildguide/**", "workbench/**"]
+SPDX-FileCopyrightText = "2026 the RangeFoundry contributors"
+SPDX-License-Identifier = "LicenseRef-Brand"
+
+# The logo generator embeds the logo geometry, so it is part of the artwork.
+[[annotations]]
+path = "generate.py"
 SPDX-FileCopyrightText = "2026 the RangeFoundry contributors"
 SPDX-License-Identifier = "LicenseRef-Brand"
 
