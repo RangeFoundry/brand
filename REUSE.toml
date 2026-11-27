@@ -1,0 +1,19 @@
+version = 1
+
+# Everything else: tokens.css, generate.py, examples/, the docs and the dev container.
+[[annotations]]
+path = "**"
+SPDX-FileCopyrightText = "2026 the RangeFoundry contributors"
+SPDX-License-Identifier = "MIT"
+
+# Logo and icon artwork. Trademark use of the names and logos: TRADEMARKS.md.
+[[annotations]]
+path = ["rangefoundry/**", "autolever/**", "buildguide/**", "workbench/**"]
+SPDX-FileCopyrightText = "2026 the RangeFoundry contributors"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+# Albert Sans subsets and the license text they ship with (fonts/OFL.txt).
+[[annotations]]
+path = "fonts/**"
+SPDX-FileCopyrightText = "2021 The Albert Sans Project Authors (https://github.com/usted/Albert-Sans)"
+SPDX-License-Identifier = "OFL-1.1"
