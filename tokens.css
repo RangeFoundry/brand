@@ -1,41 +1,49 @@
-/* RangeFoundry palette, version 1. Copy this file into a site and keep the version in its comment; do not load it from another origin.
-   Slate neutrals from the Mantine colour generator (seed #63687C), Mantine blue as the one accent (blue.8 light, blue.4 dark), amber only for safety.
-   Contrast on the page colour: ink 16:1, muted 6.8:1 light and 8.7:1 dark, accent 5.0:1 light and 7.6:1 dark, control-line 4:1 (WCAG 2.2: 4.5:1 text, 3:1 controls). */
-:root,
-[data-md-color-scheme="default"] {
-  --page: #ffffff;
-  --surface: #f6f8fc;
-  --surface-alt: #eef0f6;
-  --ink: #1d2130;
-  --muted: #555a6d;
-  --accent: #1971c2;
-  --accent-hover: #1864ab;
-  --accent-tint: #e7f5ff;
-  --on-accent: #ffffff;
-  --link: #1971c2;
-  --line: #dcdfe9;            /* separators only, never text or a control edge */
-  --control-line: #7b7f91;
+/* RangeFoundry palette, version 2. Copy this file and fonts/ into a site, keep fonts/ next to the copy and the version in its comment; do not load either from another origin.
+   Shared base (surface, ink, muted, danger, focus) with the RangeFoundry blue as the one accent (Mantine blue.8 light, blue.4 dark), amber only for safety and selection.
+   The scheme follows the system (color-scheme: light dark); a site toggle sets color-scheme on the root, MkDocs Material's palette attribute does so below.
+   Contrast on --surface, light and dark (WCAG 2.2: 4.5:1 text, 3:1 large text and controls): ink 16.2 and 16.4, muted 6.8 and 9.2, danger 6.0 and 8.8,
+   accent 4.6 and 7.5, focus 16.2 and 7.5, control-line 3.6 and 3.8, on-accent on accent 5.0 and 7.5. On --surface-alt light, accent text takes --accent-hover (5.1). */
+@font-face {
+  font-family: "Albert Sans";
+  src: url("fonts/albert-sans-latin-wght-normal.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Albert Sans";
+  src: url("fonts/albert-sans-latin-wght-italic.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light dark;
+  --font-sans: "Albert Sans", system-ui, sans-serif;   /* display 300, body 400, strong 600; code keeps the site's monospace stack */
+  --surface: light-dark(oklch(0.97 0.003 95), oklch(0.19 0.004 250));
+  --surface-alt: light-dark(oklch(0.94 0.003 95), oklch(0.23 0.004 250));
+  --ink: light-dark(oklch(0.21 0.004 250), oklch(0.96 0.003 95));
+  --muted: light-dark(oklch(0.45 0.006 250), oklch(0.78 0.005 250));
+  --danger: light-dark(oklch(0.5 0.17 32), oklch(0.78 0.13 35));
+  --accent: light-dark(#1971c2, #4dabf7);
+  --accent-hover: light-dark(#1864ab, #74c0fc);
+  --accent-tint: light-dark(#e7f5ff, #172a40);
+  --on-accent: light-dark(#ffffff, oklch(0.19 0.004 250));
+  --focus: light-dark(oklch(0.21 0.004 250), #4dabf7);
+  --line: light-dark(oklch(0.88 0.004 250), oklch(0.31 0.005 250));            /* separators only, never text or a control edge */
+  --control-line: light-dark(oklch(0.6 0.006 250), oklch(0.55 0.006 250));
   --select: #fab005;          /* selection highlight in drawings: no wire colour shares it */
-  --warn-text: #7a4f00;
-  --warn-border: #e0b84a;
-  --warn-fill: #fff6db;
+  --warn-text: light-dark(#7a4f00, #f5c518);
+  --warn-border: light-dark(#e0b84a, #6b5a12);
+  --warn-fill: light-dark(#fff6db, #1a1a12);
+}
+
+[data-md-color-scheme="default"] {
+  color-scheme: light;
 }
 
 [data-md-color-scheme="slate"] {
-  --page: #10121b;
-  --surface: #161923;
-  --surface-alt: #1e212c;
-  --ink: #e9ebf1;
-  --muted: #acb0c0;
-  --accent: #4dabf7;
-  --accent-hover: #74c0fc;
-  --accent-tint: #172a40;
-  --on-accent: #10121b;
-  --link: #74c0fc;
-  --line: #2f323f;
-  --control-line: #6f7485;
-  --select: #fab005;
-  --warn-text: #f5c518;
-  --warn-border: #6b5a12;
-  --warn-fill: #1a1a12;
+  color-scheme: dark;
 }

@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5f3" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121416" media="(prefers-color-scheme: dark)">
+  <title>RangeFoundry tokens</title>
+  <link rel="stylesheet" href="../tokens.css">
+  <style>
+    /* Sample page only: lays out every token of ../tokens.css; open it from a clone, it follows the system scheme. */
+    body {
+      margin: 0;
+      background: var(--surface);
+      color: var(--ink);
+      font: 400 1.0625rem / 1.55 var(--font-sans);
+    }
+    main {
+      max-width: 60rem;
+      margin: 0 auto;
+      padding: 2rem 1rem 4rem;
+    }
+    h1 {
+      margin: 0 0 0.5rem;
+      font-weight: 300;
+      font-size: clamp(2rem, 1.4rem + 2.4vw, 3rem);
+      line-height: 1.1;
+    }
+    h2 {
+      margin: 2.5rem 0 1rem;
+      font-weight: 600;
+      font-size: 1.25rem;
+    }
+    p {
+      margin: 0 0 0.75rem;
+    }
+    a {
+      color: inherit;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
+    }
+    :focus-visible,
+    .ring {
+      outline: 2px solid var(--focus);
+      outline-offset: 3px;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.9em;
+    }
+    hr {
+      border: 0;
+      border-top: 1px solid var(--line);
+      margin: 1.5rem 0;
+    }
+    .muted {
+      color: var(--muted);
+    }
+    .danger {
+      color: var(--danger);
+    }
+    .accent {
+      color: var(--accent);
+    }
+    .swatches {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(min(13rem, 100%), 1fr));
+      gap: 0.75rem;
+      padding: 0;
+      list-style: none;
+    }
+    .swatches li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+    .chip {
+      flex: none;
+      width: 2.5rem;
+      height: 2.5rem;
+      border: 1px solid var(--control-line);
+      border-radius: 6px;
+    }
+    .panel {
+      padding: 1rem 1.25rem;
+      background: var(--surface-alt);
+      border-radius: 6px;
+    }
+    .panel .accent {
+      color: var(--accent-hover);
+    }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+    }
+    .button {
+      padding: 0.6rem 1.1rem;
+      border: 0;
+      border-radius: 6px;
+      background: var(--accent);
+      color: var(--on-accent);
+      font: 600 1rem var(--font-sans);
+    }
+    .button.hover {
+      background: var(--accent-hover);
+    }
+    .tab {
+      padding: 0.6rem 1.1rem;
+      border-radius: 6px;
+      background: var(--accent-tint);
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .field {
+      padding: 0.55rem 0.75rem;
+      border: 1px solid var(--control-line);
+      border-radius: 6px;
+      background: var(--surface);
+      color: var(--ink);
+      font: inherit;
+    }
+    .warn {
+      padding: 1rem 1.25rem;
+      border: 1px solid var(--warn-border);
+      border-radius: 6px;
+      background: var(--warn-fill);
+      color: var(--warn-text);
+    }
+    svg {
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>RangeFoundry tokens</h1>
+    <p class="muted">Every token of <code>tokens.css</code> version 2, in the scheme your system uses.</p>
+
+    <h2>Colors</h2>
+    <ul class="swatches">
+      <li><span class="chip" style="background: var(--surface)"></span><span><code>--surface</code><br><span class="muted">page background</span></span></li>
+      <li><span class="chip" style="background: var(--surface-alt)"></span><span><code>--surface-alt</code><br><span class="muted">cards, panels, code</span></span></li>
+      <li><span class="chip" style="background: var(--ink)"></span><span><code>--ink</code><br><span class="muted">text, headings, links</span></span></li>
+      <li><span class="chip" style="background: var(--muted)"></span><span><code>--muted</code><br><span class="muted">secondary text</span></span></li>
+      <li><span class="chip" style="background: var(--danger)"></span><span><code>--danger</code><br><span class="muted">errors, destructive actions</span></span></li>
+      <li><span class="chip" style="background: var(--focus)"></span><span><code>--focus</code><br><span class="muted">focus outline</span></span></li>
+      <li><span class="chip" style="background: var(--accent)"></span><span><code>--accent</code><br><span class="muted">primary buttons, active tab</span></span></li>
+      <li><span class="chip" style="background: var(--accent-hover)"></span><span><code>--accent-hover</code><br><span class="muted">hover, accent text on panels</span></span></li>
+      <li><span class="chip" style="background: var(--accent-tint)"></span><span><code>--accent-tint</code><br><span class="muted">active tab ground</span></span></li>
+      <li><span class="chip" style="background: var(--on-accent)"></span><span><code>--on-accent</code><br><span class="muted">text on accent</span></span></li>
+      <li><span class="chip" style="background: var(--line)"></span><span><code>--line</code><br><span class="muted">separators only</span></span></li>
+      <li><span class="chip" style="background: var(--control-line)"></span><span><code>--control-line</code><br><span class="muted">input and outline edges</span></span></li>
+      <li><span class="chip" style="background: var(--select)"></span><span><code>--select</code><br><span class="muted">selection in drawings</span></span></li>
+      <li><span class="chip" style="background: var(--warn-fill); border-color: var(--warn-border)"></span><span><code>--warn-*</code><br><span class="muted">safety panels only</span></span></li>
+    </ul>
+
+    <h2>Type</h2>
+    <p style="font-weight: 300; font-size: 2rem; line-height: 1.15">Display 300: Albert Sans</p>
+    <p>Body 400 in ink, with <strong>strong 600</strong>, <em>emphasis</em>, <code>code in the monospace stack</code> and <a href="#links">a link in the text color, underlined</a>.</p>
+    <p class="muted">Muted text for captions and secondary lines.</p>
+    <p class="danger"><strong>Error:</strong> danger text always carries a word, never color alone.</p>
+    <p class="accent">Accent text on the surface.</p>
+    <hr>
+    <div class="panel">
+      <p>Ink on <code>--surface-alt</code>.</p>
+      <p class="muted">Muted on <code>--surface-alt</code>.</p>
+      <p class="accent" style="margin: 0">Accent text on a panel takes <code>--accent-hover</code>.</p>
+    </div>
+
+    <h2 id="links">Controls</h2>
+    <div class="row">
+      <button class="button" type="button">Primary</button>
+      <span class="button hover">Primary, hover</span>
+      <span class="tab">Active tab</span>
+      <label>Name <input class="field" type="text" value="Text field"></label>
+      <span class="field ring">Focus outline</span>
+    </div>
+
+    <h2>Safety and selection</h2>
+    <div class="warn" style="margin-bottom: 1rem"><strong>Warning:</strong> amber marks safety panels only.</div>
+    <svg viewBox="0 0 320 60" width="320" height="60" role="img" aria-label="A drawing with one selected wire in amber">
+      <path d="M10 30 H150" stroke="var(--ink)" stroke-width="3" fill="none"/>
+      <path d="M150 30 H310" stroke="var(--select)" stroke-width="5" fill="none"/>
+      <circle cx="150" cy="30" r="6" fill="var(--ink)"/>
+    </svg>
+  </main>
+</body>
+</html>
